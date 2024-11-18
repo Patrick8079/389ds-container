@@ -54,5 +54,6 @@ jobs:
         uses: actions/delete-package-versions@v5
         with: 
           package-name: 'container-389ds-init'
+          package-type: 'container'
           delete-only-untagged-versions: 'true'
           min-versions-to-keep: 2
