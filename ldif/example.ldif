@@ -1,0 +1,193 @@
+dn: dc=example,dc=com
+aci: (targetattr="*")(version 3.0; 
+ acl "give csmith full rights"; allow(all)
+ (userdn =  "ldap:///uid=userServiceuser,ou=serviceuser,dc=example,dc=com");)
+objectclass: top
+objectclass: domain
+dc: example
+
+dn: ou=people, dc=example,dc=com
+objectclass: top
+objectclass: organizationalunit
+ou: People
+
+dn: ou=groups, dc=example,dc=com
+objectclass: top
+objectclass: organizationalunit
+ou: groups
+
+dn: ou=serviceuser, dc=example,dc=com
+objectclass: top
+objectclass: organizationalunit
+ou: groups
+
+dn: cn=groupServiceuser,ou=groups,dc=example,dc=com
+objectClass: top
+objectClass: groupOfUniqueNames
+cn: groupServiceuser
+uniqueMember: uid=userServiceuser,ou=serviceuser,dc=example,dc=com
+
+dn: cn=groupAdmin01,ou=groups,dc=example,dc=com
+objectClass: top
+objectClass: groupOfUniqueNames
+cn: groupAdmin01
+uniqueMember: uid=userAdmin01,ou=people,dc=example,dc=com
+
+dn: cn=groupDeveloper01,ou=groups,dc=example,dc=com
+objectClass: top
+objectClass: groupOfUniqueNames
+cn: groupDeveloper01
+uniqueMember: uid=userDeveloper01,ou=people,dc=example,dc=com
+
+dn: cn=groupTester01,ou=groups,dc=example,dc=com
+objectClass: top
+objectClass: groupOfUniqueNames
+cn: groupTester01
+uniqueMember: uid=userTester01,ou=people,dc=example,dc=com
+
+dn: cn=groupAuditer01,ou=groups,dc=example,dc=com
+objectClass: top
+objectClass: groupOfUniqueNames
+cn: groupAuditer01
+uniqueMember: uid=userAuditer01,ou=people,dc=example,dc=com
+
+dn: cn=groupAdmin02,ou=groups,dc=example,dc=com
+objectClass: top
+objectClass: groupOfUniqueNames
+cn: groupAdmin02
+uniqueMember: uid=userAdmin02,ou=people,dc=example,dc=com
+
+dn: cn=groupDeveloper02,ou=groups,dc=example,dc=com
+objectClass: top
+objectClass: groupOfUniqueNames
+cn: groupDeveloper02
+uniqueMember: uid=userDeveloper02,ou=people,dc=example,dc=com
+
+dn: cn=groupTester02,ou=groups,dc=example,dc=com
+objectClass: top
+objectClass: groupOfUniqueNames
+cn: groupTester02
+uniqueMember: uid=userTester02,ou=people,dc=example,dc=com
+
+dn: cn=groupAuditer02,ou=groups,dc=example,dc=com
+objectClass: top
+objectClass: groupOfUniqueNames
+cn: groupAuditer02
+uniqueMember: uid=userAuditer02,ou=people,dc=example,dc=com
+
+dn: uid=userAdmin01, ou=People, dc=example,dc=com
+uid: userAdmin01
+cn: userAdmin01
+sn: userAdmin01
+givenname: userAdmin01
+mail: userAdmin01@example.com
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+l: Germany
+userpassword: userAdmin01
+
+dn: uid=userDeveloper01, ou=people, dc=example,dc=com
+uid: userDeveloper01
+cn: userDeveloper01
+sn: userDeveloper01
+givenname: userDeveloper01
+mail: userDeveloper01@example.com
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+l: Germany
+userpassword: userDeveloper01
+
+dn: uid=userTester01, ou=people, dc=example,dc=com
+uid: userTester01
+cn: userTester01
+sn: userTester01
+givenname: userTester01
+mail: userTester01@example.com
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+l: Germany
+userpassword: userTester01
+
+dn: uid=userAuditer01, ou=people, dc=example,dc=com
+uid: userAuditer01
+cn: userAuditer01
+sn: userAuditer01
+givenname: userAuditer01
+mail: userAuditer01@example.com
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+l: Germany
+userpassword: userAuditer01
+
+dn: uid=userAdmin02, ou=People, dc=example,dc=com
+uid: userAdmin02
+cn: userAdmin02
+sn: userAdmin02
+givenname: userAdmin02
+mail: userAdmin02@example.com
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+l: Germany
+userpassword: userAdmin02
+
+dn: uid=userDeveloper02, ou=people, dc=example,dc=com
+uid: userDeveloper02
+cn: userDeveloper02
+sn: userDeveloper02
+givenname: userDeveloper02
+mail: userDeveloper02@example.com
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+l: Germany
+userpassword: userDeveloper02
+
+dn: uid=userTester02, ou=people, dc=example,dc=com
+uid: userTester02
+cn: userTester02
+sn: userTester02
+givenname: userTester02
+mail: userTester02@example.com
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+l: Germany
+userpassword: userTester02
+
+dn: uid=userAuditer02, ou=people, dc=example,dc=com
+uid: userAuditer02
+cn: userAuditer02
+sn: userAuditer02
+givenname: userAuditer02
+mail: userAuditer02@example.com
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+l: Germany
+userpassword: userAuditer02
+
+dn: uid=userServiceuser, ou=serviceuser, dc=example,dc=com
+uid: userServiceuser
+cn: userServiceuser
+sn: userServiceuser
+givenname: userServiceuser
+mail: userServiceuser@example.com
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+l: Germany
+userpassword: userServiceuser
