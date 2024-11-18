@@ -50,7 +50,7 @@ jobs:
       - name: Remove all older containers
         uses: actions/delete-package-versions@v5
         with: 
-          package-name: '389ds-init'
+          package-name: 'container-389ds-init'
           package-type: 'container'
           min-versions-to-keep: 1
           delete-only-untagged-versions: 'true'
