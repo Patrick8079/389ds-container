@@ -13,7 +13,7 @@ services:
       - ldap
   ldap-init:
     restart: no
-    image: ghcr.io/patrick8079/container-389ds-init:main
+    image: ghcr.io/patrick8079/container-389ds-init:latest
     hostname: ldap-init
     volumes:
       - ldap:/data
