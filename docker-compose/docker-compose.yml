@@ -5,8 +5,7 @@ services:
     hostname: ldap
     volumes:
       - ldap:/data
-    environment:
-      DS_DM_PASSWORD: '123456'
+    env_file: ".ldap.env"
     ports:
       - "636:3636"
       - "389:3389"
@@ -18,19 +17,13 @@ services:
     hostname: ldap-init
     volumes:
       - ldap:/data
-    environment:
-      DS_INIT_BIND_DN_PASSWORD: 123456
-      DS_INIT_TARGET_HOST: ldap
-      DS_INIT_PORT: 3389
-      DS_INIT_PROTOCOL: ldap
-      DS_INIT_SUFFIX_NAME: dc=example,dc=com
-      DS_INIT_BE_NAME: userRoot
+    env_file: ".ldap-init.env"
+    networks:
+      - ldap
     entrypoint: /root/init.sh
     depends_on:
       ldap:
         condition: "service_started"
-    networks:
-      - ldap
 volumes:
   ldap:
 networks:
