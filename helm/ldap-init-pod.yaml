@@ -42,7 +42,7 @@ spec:
             configMapKeyRef:
               key: DS_INIT_TARGET_HOST
               name: ldap-init-env
-      image: ghcr.io/patrick8079/container-389ds-init:latest
+      image: ghcr.io/patrick8079/container-389ds-init:main
       name: ldap-init
       volumeMounts:
         - mountPath: /data
