@@ -5,6 +5,7 @@ metadata:
     io.kompose.service: ldap
   name: ldap
 spec:
+  storageClassName: manual
   accessModes:
     - ReadWriteOnce
   resources:
