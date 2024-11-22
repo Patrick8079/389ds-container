@@ -1,0 +1,13 @@
+apiVersion: v1
+data:
+  DS_INIT_BE_NAME: userRoot
+  DS_INIT_BIND_DN_PASSWORD: "123456"
+  DS_INIT_PORT: "3389"
+  DS_INIT_PROTOCOL: ldap
+  DS_INIT_SUFFIX_NAME: dc=example,dc=com
+  DS_INIT_TARGET_HOST: ldap
+kind: ConfigMap
+metadata:
+  labels:
+    io.kompose.service: ldap-init-ldap-init-env
+  name: ldap-init-env

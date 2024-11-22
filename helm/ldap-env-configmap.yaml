@@ -1,0 +1,8 @@
+apiVersion: v1
+data:
+  DS_DM_PASSWORD: "123456"
+kind: ConfigMap
+metadata:
+  labels:
+    io.kompose.service: ldap-ldap-env
+  name: ldap-env
