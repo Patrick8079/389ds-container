@@ -9,23 +9,16 @@ services:
     ports:
       - "636:3636"
       - "389:3389"
-    networks:
-      - ldap
   ldap-init:
     restart: no
-    image: ghcr.io/patrick8079/container-389ds-init:latest
+    image: ghcr.io/patrick8079/container-389ds-init:main
     hostname: ldap-init
     volumes:
       - ldap:/data
     env_file: ".ldap-init.env"
-    networks:
-      - ldap
     entrypoint: /root/init.sh
     depends_on:
       ldap:
         condition: "service_started"
 volumes:
   ldap:
-networks:
-  ldap:
-    driver: bridge
